@@ -70,5 +70,6 @@ public class CardTester {
         11,
         "[brown, blue, green, ltblue, orange, purple, black, red, ltgreen, yellow]",
         w.getColors());
+    print(12, "5", w.getCardId());
   }
 }

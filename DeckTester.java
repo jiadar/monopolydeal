@@ -16,6 +16,8 @@ public class DeckTester {
     System.out.println("\nThe current deck is:");
     System.out.println(d);
 
-    print(1, "110", d.numCardsInDeck());
+    print(1, "108", d.numCardsInDeck());
+
+
   }
 }

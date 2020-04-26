@@ -1,13 +1,20 @@
 public class Card {
 
+  static int instanceCounter = 0;
   protected String name, type, description;
-  protected int moneyValue;
+  protected int moneyValue, cardId;
 
   public Card(String name, String type, String description, int moneyValue) {
+    instanceCounter++;
     this.name = name;
     this.type = type;
     this.description = description;
     this.moneyValue = moneyValue;
+    this.cardId = instanceCounter;
+  }
+
+  public int getCardId() {
+    return cardId;
   }
 
   public String getName() {
