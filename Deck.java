@@ -220,17 +220,33 @@ public class Deck {
     wildcard8.addColor("yellow");
     wildcard8.addColor("red");
     deck.add(wildcard8);
-    deck.add(wildcard8);
+
+    WildCard wildcard8b = new WildCard("yellow/red Wild Card", "Use with yellow/red properties", 3);
+    wildcard8b.addColor("yellow");
+    wildcard8b.addColor("red");
+    deck.add(wildcard8b);
+    
 
   }
   public int numCardsInDeck() {
     return this.deck.size();
   }
 
-  public int[] order() {
-    int[] lexOrder = new int[108];
+  public ArrayList<Integer> order() {
+    ArrayList<Integer> lexOrder = new ArrayList<Integer>();
     // andy to write
+
+    for(int i = 0; i < deck.size(); i++){
+       Card newCard = deck.get(i);
+       int id = newCard.getCardId();
+       //System.out.println("added " + newCard.getName() + " to ordering (id = " + id + ")");
+       lexOrder.add(id);
+    }
     return lexOrder;
+  }
+  
+  public void shuffle() {
+    // shuffle the deck - andy to write
   }
 
   public String toString() {
