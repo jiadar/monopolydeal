@@ -22,7 +22,7 @@ public class DeckTester {
 
     print(2, initialOrder, d.order()); 
 
-    d.shuffle();
+   
 
     String newOrder = d.order().toString();
     if (initialOrder.compareTo(newOrder) != 0 ) {

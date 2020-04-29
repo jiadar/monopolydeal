@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Deck {
   ArrayList<Card> deck = new ArrayList<Card>();
@@ -136,38 +137,83 @@ public class Deck {
     w.addColor("ltgreen");
     w.addColor("yellow");
     deck.add(w);
-    deck.add(w);
-    deck.add(w);
 
-    w = new RentCard("Green / Blue", "Charge rent on green or blue property", 1);
-    w.addColor("brown");
-    w.addColor("ltblue");
-    deck.add(w);
-    deck.add(w);
+    RentCard w1 = new RentCard("Wild Rent Card", "Charge rent on any property", 3);
+    w1.addColor("brown");
+    w1.addColor("blue");
+    w1.addColor("green");
+    w1.addColor("ltblue");
+    w1.addColor("orange");
+    w1.addColor("purple");
+    w1.addColor("black");
+    w1.addColor("red");
+    w1.addColor("ltgreen");
+    w1.addColor("yellow");
+    deck.add(w1);
 
-    w = new RentCard("Railroad / Utility", "Charge rent on Railroad or utility property", 1);
-    w.addColor("black");
-    w.addColor("ltgreen");
-    deck.add(w);
-    deck.add(w);
+    RentCard w2 = new RentCard("Wild Rent Card", "Charge rent on any property", 3);
+    w2.addColor("brown");
+    w2.addColor("blue");
+    w2.addColor("green");
+    w2.addColor("ltblue");
+    w2.addColor("orange");
+    w2.addColor("purple");
+    w2.addColor("black");
+    w2.addColor("red");
+    w2.addColor("ltgreen");
+    w2.addColor("yellow");
+    deck.add(w2);
+   
 
-    w = new RentCard("Orange / Purple", "Charge rent on orange or purple property", 1);
-    w.addColor("orange");
-    w.addColor("purple");
-    deck.add(w);
-    deck.add(w);
+    RentCard w3 = new RentCard("Green / Blue", "Charge rent on green or blue property", 1);
+    w3.addColor("brown");
+    w3.addColor("ltblue");
+    deck.add(w3);
+
+    RentCard w4 = new RentCard("Green / Blue", "Charge rent on green or blue property", 1);
+    w4.addColor("brown");
+    w4.addColor("ltblue");
+    deck.add(w4);
+
+    RentCard w5 = new RentCard("Railroad / Utility", "Charge rent on Railroad or utility property", 1);
+    w5.addColor("black");
+    w5.addColor("ltgreen");
+    deck.add(w5);
+
+    RentCard w6 = new RentCard("Railroad / Utility", "Charge rent on Railroad or utility property", 1);
+    w6.addColor("black");
+    w6.addColor("ltgreen");
+    deck.add(w6);
     
-    w = new RentCard("Brown / Light Blue", "Charge rent on brown or light blue property", 1);
-    w.addColor("brown");
-    w.addColor("ltblue");
-    deck.add(w);
-    deck.add(w);
+    RentCard w7 = new RentCard("Orange / Purple", "Charge rent on orange or purple property", 1);
+    w7.addColor("orange");
+    w7.addColor("purple");
+    deck.add(w7);
 
-    w = new RentCard("Red / Yellow", "Charge rent on red or yellow property", 1);
-    w.addColor("red");
-    w.addColor("yellow");
-    deck.add(w);
-    deck.add(w);
+    RentCard w8 = new RentCard("Orange / Purple", "Charge rent on orange or purple property", 1);
+    w8.addColor("orange");
+    w8.addColor("purple");
+    deck.add(w8);
+    
+    RentCard w9 = new RentCard("Brown / Light Blue", "Charge rent on brown or light blue property", 1);
+    w9.addColor("brown");
+    w9.addColor("ltblue");
+    deck.add(w9);
+
+    RentCard w10 = new RentCard("Brown / Light Blue", "Charge rent on brown or light blue property", 1);
+    w10.addColor("brown");
+    w10.addColor("ltblue");
+    deck.add(w10);
+
+    RentCard w11 = new RentCard("Red / Yellow", "Charge rent on red or yellow property", 1);
+    w11.addColor("red");
+    w11.addColor("yellow");
+    deck.add(w11);
+
+    RentCard w12 = new RentCard("Red / Yellow", "Charge rent on red or yellow property", 1);
+    w12.addColor("red");
+    w12.addColor("yellow");
+    deck.add(w12);
 
     // WILD CARDS - 11
 
@@ -181,26 +227,43 @@ public class Deck {
     wildcard2.addColor("brown");
     deck.add(wildcard2);
     
-    WildCard wildcard3 = new WildCard("brown/blue/green/ltblue/orange/purple/black/red/ltgreen/yellow Wild Card", "Use with brown/blue/green/ltblue/orange/purple/black/red/ltgreen/yellow properties", 0);
-    wildcard3.addColor("brown");
-    wildcard3.addColor("blue");
-    wildcard3.addColor("green");
-    wildcard3.addColor("ltblue");
-    wildcard3.addColor("orange");
-    wildcard3.addColor("purple");
-    wildcard3.addColor("black");
-    wildcard3.addColor("red");
-    wildcard3.addColor("ltgreen");
-    wildcard3.addColor("yellow");
-    deck.add(wildcard3);
-    deck.add(wildcard3);
+    WildCard wildcard3a = new WildCard("brown/blue/green/ltblue/orange/purple/black/red/ltgreen/yellow Wild Card", "Use with brown/blue/green/ltblue/orange/purple/black/red/ltgreen/yellow properties", 0);
+    wildcard3a.addColor("brown");
+    wildcard3a.addColor("blue");
+    wildcard3a.addColor("green");
+    wildcard3a.addColor("ltblue");
+    wildcard3a.addColor("orange");
+    wildcard3a.addColor("purple");
+    wildcard3a.addColor("black");
+    wildcard3a.addColor("red");
+    wildcard3a.addColor("ltgreen");
+    wildcard3a.addColor("yellow");
+    deck.add(wildcard3a);
 
-    WildCard wildcard4 = new WildCard("orange/purple Wild Card", "Use with orange/purple properties", 2);
-    wildcard4.addColor("orange");
-    wildcard4.addColor("purple");
-    deck.add(wildcard4);
-    deck.add(wildcard4);
-    
+    WildCard wildcard3b = new WildCard("brown/blue/green/ltblue/orange/purple/black/red/ltgreen/yellow Wild Card", "Use with brown/blue/green/ltblue/orange/purple/black/red/ltgreen/yellow properties", 0);
+    wildcard3b.addColor("brown");
+    wildcard3b.addColor("blue");
+    wildcard3b.addColor("green");
+    wildcard3b.addColor("ltblue");
+    wildcard3b.addColor("orange");
+    wildcard3b.addColor("purple");
+    wildcard3b.addColor("black");
+    wildcard3b.addColor("red");
+    wildcard3b.addColor("ltgreen");
+    wildcard3b.addColor("yellow");
+    deck.add(wildcard3b);
+
+
+    WildCard wildcard4a = new WildCard("orange/purple Wild Card", "Use with orange/purple properties", 2);
+    wildcard4a.addColor("orange");
+    wildcard4a.addColor("purple");
+    deck.add(wildcard4a);
+
+    WildCard wildcard4b = new WildCard("organe/purple Wild Card", "Use with orange/purple properties", 2);
+    wildcard4b.addColor("orange");
+    wildcard4b.addColor("purple");
+    deck.add(wildcard4b);
+
     WildCard wildcard5 = new WildCard("green/black Wild Card", "Use with green/black properties", 4);
     wildcard5.addColor("green");
     wildcard5.addColor("black");
@@ -245,7 +308,15 @@ public class Deck {
     return lexOrder;
   }
   
-  public void shuffle() {
+  public void shuffle(ArrayList<Integer> deck) {
+    
+    Random rand = new Random();
+    for (int i = 0; i < deck.size(); i++) {
+			int randomINX = rand.nextInt(deck.size());
+			int temp = deck[randomINX];
+			deck[randomINX] = deck[i];
+			deck[i] = temp;
+		}
     // shuffle the deck - andy to write
   }
 
@@ -257,3 +328,4 @@ public class Deck {
     return rval;
   }
 }
+
