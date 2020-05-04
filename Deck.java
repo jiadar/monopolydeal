@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Deck {
-  ArrayList<Card> deck = new ArrayList<Card>();
+  private ArrayList<Card> deck = new ArrayList<Card>();
+  private ArrayList<Card> discards = new ArrayList<Card>();
 
   public Deck() {
     // Creat a monopoly deal deck by creating each card and adding the card to the deck
@@ -308,16 +309,46 @@ public class Deck {
     return lexOrder;
   }
   
-  public void shuffle(ArrayList<Integer> deck) {
+  public void shuffle() {
     
     Random rand = new Random();
     for (int i = 0; i < deck.size(); i++) {
-			int randomINX = rand.nextInt(deck.size());
-			int temp = deck[randomINX];
-			deck[randomINX] = deck[i];
-			deck[i] = temp;
+      int randomINX = rand.nextInt(deck.size());
+
+      Card temp = deck.get(i);
+      Card card_to_swap = deck.get(randomINX);
+      deck.set(i, card_to_swap);
+      deck.set(randomINX, temp); 
 		}
-    // shuffle the deck - andy to write
+  }
+
+  public Card draw() {
+    if (deck.size() == 0){
+      for(int i = 0; i < discards.size(); i++){
+        deck.add(discards.get(i));
+     }
+     // empty the discard pile
+     discards.clear();
+     this.shuffle();
+     Card drawn = deck.remove(0);
+     return drawn;
+   }
+
+    Card drawn = deck.get(0);
+    deck.remove(0);
+    return drawn;
+   
+    // take the card from the top of the deck and return it, 
+    // removing it from the deck
+    // If there are no more cards in the deck, then return
+    // the discarded cards to the deck, and shuffle the deck before
+    // drawing
+  }
+
+  public void discard(Card c) {
+    discards.add(c);
+    // maintain a deck of discarded cards, and add this Card to the 
+    // the discarded cards
   }
 
   public String toString() {

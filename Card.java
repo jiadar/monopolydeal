@@ -4,6 +4,15 @@ public class Card {
   protected String name, type, description;
   protected int moneyValue, cardId;
 
+  public Card() {
+    instanceCounter++;
+    this.name="undefined";
+    this.type="undefined";
+    this.description="undefined";
+    this.moneyValue = 0;
+    this.cardId = instanceCounter;
+  }
+
   public Card(String name, String type, String description, int moneyValue) {
     instanceCounter++;
     this.name = name;
