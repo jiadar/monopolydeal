@@ -1,18 +1,18 @@
+package monopoly.app;
+
 import java.util.ArrayList;
 
-public class WildCard extends Card {
+public class RentCard extends Card {
 
   ArrayList<String> colors;
-  String designatedColor;
 
-  public WildCard(String name, String description, int moneyValue) {
-    super(name, "Wild", description, moneyValue);
+  public RentCard(String name, String description, int moneyValue) {
+    super(name, "Rent", description, moneyValue);
     colors = new ArrayList<String>();
   }
 
   public void addColor(String color) {
     colors.add(color);
-    this.designatedColor = color;
   }
 
   public String getColors() {
@@ -34,27 +34,13 @@ public class WildCard extends Card {
     return false;
   }
 
-  public boolean canBecomeColor(String color) {
-    return this.matches(color);
-  }
-
   public boolean hasColor(String color) {
-    return designatedColor == color;
-  }
-
-  public void setColor(String color) {
-    if (this.matches(color)) {
-      this.designatedColor = color;
-    }
-  }
-
-  public String getDesignatedColor() {
-    return designatedColor;
+    return this.matches(color);
   }
 
   public String toString() {
     String fstr = "";
-    fstr = "WildCard(name=%s, type=%s, description=%s, moneyValue=%d, colors=%s)";
+    fstr = "RentCard(name=%s, type=%s, description=%s, moneyValue=%d, colors=%s)";
     return String.format(fstr, name, type, description, moneyValue, this.getColors());
   }
 }

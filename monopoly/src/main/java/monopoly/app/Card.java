@@ -1,3 +1,5 @@
+package monopoly.app;
+
 public class Card {
 
   static int instanceCounter = 0;

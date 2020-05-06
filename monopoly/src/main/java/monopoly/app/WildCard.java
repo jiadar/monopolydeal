@@ -1,3 +1,5 @@
+package monopoly.app;
+
 import java.util.ArrayList;
 
 public class WildCard extends Card {

@@ -1,4 +1,10 @@
-class GameTester {
+package monopoly.app;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
+public class GameTest {
 
   private static Card getCard(String type) {
     if (type == "all wild") {
@@ -38,53 +44,31 @@ class GameTester {
     return new PropertyCard("Oriental", "Oriental Ave", 1, "ltblue");
   }
 
-  public static void main(String[] args) {
+  @Test
+  public void propertySetTest() {
     Player andrew = new Player();
-    Player javin = new Player();
-    // System.out.println(andrew.getName());
-    // System.out.println(javin.getName());
-
     Deck newDeck = new Deck();
     newDeck.shuffle();
-    // loop
-
     while (andrew.getHand().size() < 5) {
       Card c = newDeck.draw();
       andrew.addCardToHand(c);
     }
-
-    // System.out.println(andrew.cardNamesInHand());
-
-    // andrew.discardFromHand(7);
-
-    // System.out.println(andrew.cardNamesInHand());
-
-    // Test for num property sets
-    andrew.addCardToHand(GameTester.getCard("baltic"));
-    andrew.addCardToHand(GameTester.getCard("oriental"));
-    andrew.addCardToHand(GameTester.getCard("connecticut"));
-    Card c1 = GameTester.getCard("wild ltblue brown");
+    andrew.addCardToHand(GameTest.getCard("baltic"));
+    andrew.addCardToHand(GameTest.getCard("oriental"));
+    andrew.addCardToHand(GameTest.getCard("connecticut"));
+    Card c1 = GameTest.getCard("wild ltblue brown");
     c1.setColor("ltblue");
     andrew.addCardToHand(c1);
-    Card c2 = GameTester.getCard("wild");
+    Card c2 = GameTest.getCard("wild");
     c2.setColor("brown");
     andrew.addCardToHand(c2);
-
-    System.out.println("Cards in Hand: ");
-    System.out.println(andrew.cardNamesInHand());
-
     andrew.playCardToTable(5);
     andrew.playCardToTable(5);
     andrew.playCardToTable(5);
     andrew.playCardToTable(5);
     andrew.playCardToTable(5);
-
-    System.out.println("Cards on table: ");
-    System.out.println(andrew.cardNamesOnTable());
-
-    System.out.println(andrew.numCardsOnTableByColor("brown")); // Should print 2
-    System.out.println(andrew.numCardsOnTableByColor("ltblue")); // Should print 3
-
-    System.out.println(andrew.numPropertySets()); // Should print 2
+    assertTrue(andrew.numCardsOnTableByColor("brown") == 2); // Should print 2
+    assertTrue(andrew.numCardsOnTableByColor("ltblue") == 3); // Should print 3
+    assertTrue(andrew.numPropertySets() == 2); // Should print 2
   }
 }

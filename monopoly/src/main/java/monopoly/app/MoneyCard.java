@@ -1,3 +1,5 @@
+package monopoly.app;
+
 public class MoneyCard extends Card {
 
   public MoneyCard(String name, String description, int moneyValue) {

@@ -1,3 +1,5 @@
+package monopoly.app;
+
 public class PropertyCard extends Card {
 
   boolean house, hotel;
