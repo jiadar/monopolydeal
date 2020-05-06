@@ -1,13 +1,37 @@
 package monopoly.app;
-
+import java.util.Scanner;
 /** Hello world! */
 public class Main {
   public static void main(String[] args) {
     System.out.println("Welcome to Monopoly Deal");
-    // Get name for player1
-    // Get name for player2
+    Scanner sc = new Scanner(System.in);
+    // [1] = a message for player 1 only
+    // {1} = an input request for player 1
+    // [2] = a message for player 2 only
+    // {2} = an input request for player 2
+    // [A] = a message for all players
+
+    System.out.print("[1] What is your name? ");
+    String name = sc.nextLine();
+    System.out.println("Hello, and thank you for playing Monopoly, " + name + "!");
+
+    System.out.print("[2] What is your name? ");
+    String name_2 = sc.nextLine();
+    System.out.println("Hello, and thank you for playing Monopoly, " + name_2 + "!");
+
     // Set it to be player1's turn
+
+    String playersTurn = name;
+    
+    
     // Start a new game
+    // make 2 players 
+    
+    Game g = new Game();
+    Player newPlayer = new Player(name);
+    Player newPlayer_1 = new Player(name_2);
+    g.addPlayer(newPlayer);
+    g.addPlayer(newPlayer_2);
 
     // Player 1 is delt two new cards
     // Display the cards in hand and cards on table for player 1

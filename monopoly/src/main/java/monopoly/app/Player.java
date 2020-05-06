@@ -99,10 +99,6 @@ public class Player {
     playersHand.remove(playersHand.get(idx));
     cardsOnTable.add(otherCard);
     return otherCard;
-    // take a card at idx that is in the hand
-    // remove the card from the hand
-    // put the card on the table
-    // return the card that was played
   }
 
   public int numCardsOnTableByColor(String color) {
