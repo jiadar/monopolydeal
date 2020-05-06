@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/13.0.2+8_2/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/javin/work/java/Monopoly/monopoly/target/surefire/surefirebooter13562903262053829411.jar /Users/javin/work/java/Monopoly/monopoly/target/surefire 2020-05-06T11-15-33_147-jvmRun1 surefire6876640610141992944tmp surefire_08852756596941695715tmp"/>
+    <property name="sun.java.command" value="/Users/javin/work/java/Monopoly/monopoly/target/surefire/surefirebooter17072342297719831275.jar /Users/javin/work/java/Monopoly/monopoly/target/surefire 2020-05-06T14-06-51_708-jvmRun1 surefire2956724946595191085tmp surefire_012902303176164446869tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/javin/work/java/Monopoly/monopoly/target/test-classes:/Users/javin/work/java/Monopoly/monopoly/target/classes:/Users/javin/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/javin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/Users/javin/work/java/Monopoly/monopoly/target/surefire/surefirebooter13562903262053829411.jar"/>
+    <property name="surefire.real.class.path" value="/Users/javin/work/java/Monopoly/monopoly/target/surefire/surefirebooter17072342297719831275.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="13.0.2+8"/>

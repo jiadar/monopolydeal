@@ -3,19 +3,7 @@ package monopoly.app;
 import java.util.ArrayList;
 
 public class Game {
-  // A game has 2 players, and a deck and act as a dealer
-  // The game will have the following state:
-  // If the game has started
-  // What players are in the game
-  // What players turn it is
-  // The game deck
   //
-  // The game will have the following actions:
-  // Add a player
-  // A player could go bankrupt (remove)
-  // A player wins the game
-  // Accepting action cards or discard cards by players to the discard pile
-  // Dealing cards from the deck to players
 
   private boolean hasStarted = false;
   private ArrayList<Player> whosPlaying = new ArrayList<Player>();
