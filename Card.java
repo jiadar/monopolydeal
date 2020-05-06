@@ -6,9 +6,9 @@ public class Card {
 
   public Card() {
     instanceCounter++;
-    this.name="undefined";
-    this.type="undefined";
-    this.description="undefined";
+    this.name = "undefined";
+    this.type = "undefined";
+    this.description = "undefined";
     this.moneyValue = 0;
     this.cardId = instanceCounter;
   }
@@ -56,6 +56,14 @@ public class Card {
 
   public void setMoneyValue(int moneyValue) {
     this.moneyValue = moneyValue;
+  }
+
+  public boolean hasColor(String color) {
+    return false;
+  }
+
+  public void setColor(String color) {
+    return;
   }
 
   public String toString() {

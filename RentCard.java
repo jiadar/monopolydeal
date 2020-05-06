@@ -32,6 +32,10 @@ public class RentCard extends Card {
     return false;
   }
 
+  public boolean hasColor(String color) {
+    return this.matches(color);
+  }
+
   public String toString() {
     String fstr = "";
     fstr = "RentCard(name=%s, type=%s, description=%s, moneyValue=%d, colors=%s)";
